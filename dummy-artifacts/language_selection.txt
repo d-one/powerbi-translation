@@ -1,0 +1,38 @@
+{
+"name": "LanguageSelection",
+"annotations": [
+    {
+    "name": "PBI_Id",
+    "value": "cb0a60074ae644a786f2a65d13da3fdf"
+    }
+],
+"columns": [
+    {
+    "name": "LanguageCode",
+    "annotations": [
+        {
+        "name": "SummarizationSetBy",
+        "value": "Automatic"
+        }
+    ],
+    "dataType": "string",
+    "isDataTypeInferred": true,
+    "isNameInferred": true,
+    "lineageTag": "ef7f7269-250b-4e34-a89a-ccf66313119a",
+    "sourceColumn": "[LanguageCode]",
+    "summarizeBy": "none",
+    "type": "calculatedTableColumn"
+    }
+],
+"lineageTag": "3233461f-3af7-4c89-bbed-f18c9986d7d6",
+"partitions": [
+    {
+    "name": "LanguageSelection",
+    "mode": "import",
+    "source": {
+        "expression": "DATATABLE(\"LanguageCode\", STRING, {{\"DE\"}, {\"FR\"}})",
+        "type": "calculated"
+    }
+    }
+]
+}

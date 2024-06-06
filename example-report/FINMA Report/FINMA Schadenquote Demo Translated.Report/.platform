@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FINMA Schadenquote Demo Translated"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "514dd07c-4646-4a08-bdfa-1439f5f4aa9e"
+  }
+}

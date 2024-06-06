@@ -1,0 +1,763 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Dim Schaden Art\",\"Dim Versicherer\",\"Fact\",\"Dim Schaden Art_with_translation\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.129.1229.0 (24.05)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_90d51fc5-7fcc-4401-854f-2a9a8ed3d2f2",
+        "fromColumn": "schaden_art_hk",
+        "fromTable": "Fact",
+        "toColumn": "schaden_art_hk",
+        "toTable": "Dim Schaden Art"
+      },
+      {
+        "name": "AutoDetected_6f12dc11-3e7b-40cf-864d-7605597c1808",
+        "fromColumn": "versicherer_hk",
+        "fromTable": "Fact",
+        "toColumn": "versicherer_hk",
+        "toTable": "Dim Versicherer"
+      },
+      {
+        "name": "AutoDetected_d10a6936-7d36-4873-a9ed-4dbded8a8323",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "Schaden Art",
+        "fromTable": "Dim Schaden Art_with_translation",
+        "isActive": false,
+        "toColumn": "Schaden Art",
+        "toTable": "Dim Schaden Art"
+      },
+      {
+        "name": "AutoDetected_fae0eaa9-34b7-4389-becf-7b8ddb5b1a0d",
+        "fromColumn": "schaden_art_hk",
+        "fromTable": "Fact",
+        "toColumn": "schaden_art_hk",
+        "toTable": "Dim Schaden Art_with_translation"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Dim Schaden Art",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Schaden Art",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e97250a3-a101-4b15-beaa-d590c87af875",
+            "sourceColumn": "Schaden Art",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art Gruppe",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "121fa3b3-112a-4e3f-b22a-3967a8405e07",
+            "sourceColumn": "Schaden Art Gruppe",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "schaden_art_hk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5068dcd9-8f20-4a75-b2c9-47ea9796e402",
+            "sourceColumn": "schaden_art_hk",
+            "summarizeBy": "none"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Schaden Art Hierarchie",
+            "levels": [
+              {
+                "name": "Schaden Art Gruppe",
+                "column": "Schaden Art Gruppe",
+                "lineageTag": "400b4995-5309-4c23-b40a-c5f4cf1ed86d",
+                "ordinal": 0
+              },
+              {
+                "name": "Schaden Art",
+                "column": "Schaden Art",
+                "lineageTag": "336b762e-b020-4cc4-90d7-19b55d1f13cb",
+                "ordinal": 1
+              }
+            ],
+            "lineageTag": "0cb1fd1e-ecf4-42f6-9b74-222972778d01"
+          }
+        ],
+        "lineageTag": "aeb42133-4aa5-4d02-977c-e471dba02237",
+        "partitions": [
+          {
+            "name": "Dim Schaden Art",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                "    finmains_dim_schaden = oddwh{[Schema=\"finmains\",Item=\"dim_schaden\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_dim_schaden,{{\"schaden_art\", \"Schaden Art\"}, {\"schaden_art_group\", \"Schaden Art Gruppe\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_5e0ebd0d-b5db-46a1-992d-294b1c5290cb",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "42ac3b57-7ff8-4593-b26f-cec6a0e24449",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "4826d4c5-5c88-45ab-99e0-dccb216bb454",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "bd53cc1c-9893-44f9-9ea7-08c35063d7ff",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "67b82404-45e9-41c8-9f59-568b31514688",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "1372f4d7-ed55-4702-b38c-df239ba4620a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "164f038a-af04-45f9-a74b-f6b69b44d0b8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "213d22ca-814a-4fb1-bf03-fc19a3cd1572",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "b1727061-639b-4463-979d-4662ef58dfe0",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "87b41f4d-3617-454e-8397-9f5362849989",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "9da1fa8a-8bd5-416b-a766-e562cb051be5",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "4621a887-76c7-4ade-abf0-71f098e52e01",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "c5613ede-9523-48b1-9189-94639b8bfdd6"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "de798f81-fa12-4e38-afa8-3a950a30a854",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_5e0ebd0d-b5db-46a1-992d-294b1c5290cb",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim Versicherer",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "versicherer_hk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "642b37c5-b7cf-4103-96a2-1ab107235bca",
+            "sourceColumn": "versicherer_hk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Versicherer",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa9c5063-eed0-42f6-8a8e-cf215a5e882b",
+            "sourceColumn": "Versicherer",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "260d6643-611d-46cb-921c-a8cf9841f29a",
+        "partitions": [
+          {
+            "name": "Dim Versicherer",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                "    finmains_dim_versicherer = oddwh{[Schema=\"finmains\",Item=\"dim_versicherer\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_dim_versicherer,{{\"versicherer\", \"Versicherer\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fact",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "schaden_art_hk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d5ae51de-4660-4e9f-a159-edb48ead1ec1",
+            "sourceColumn": "schaden_art_hk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "versicherer_hk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cdbd0f1f-46c4-4d3c-ab0c-558b21fe02b4",
+            "sourceColumn": "versicherer_hk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Jahr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ef9f79de-ffda-43a3-8a31-49fdd7bc4c07",
+            "sourceColumn": "Jahr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "verdiente_praemien_mchf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "844b081a-7b76-40a3-877e-54ded9a6a7e8",
+            "sourceColumn": "verdiente_praemien_mchf",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "netto_schaden_mchf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "2f876856-09db-4a68-adff-63e823195a53",
+            "sourceColumn": "netto_schaden_mchf",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "94906ac5-d84a-4812-8a7c-a62fcfa29b25",
+        "measures": [
+          {
+            "name": "Schaden Netto MCHF",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDecimal\":true}"
+              }
+            ],
+            "expression": "sum('Fact'[netto_schaden_mchf])",
+            "formatString": "#,0",
+            "lineageTag": "1016c38a-de8f-404c-aebf-04c6bdf07bbc"
+          },
+          {
+            "name": "Verdiente Prämien MCHF",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDecimal\":true}"
+              }
+            ],
+            "expression": "sum('Fact'[verdiente_praemien_mchf])",
+            "formatString": "#,0",
+            "lineageTag": "9e55340e-a68d-4b87-a44e-baa81a26e36a"
+          },
+          {
+            "name": "Schadenquote",
+            "expression": "DIVIDE([Schaden Netto MCHF], [Verdiente Prämien MCHF])",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "lineageTag": "3124441c-8f5c-4a67-8b7a-ccb495b65b38"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                "    finmains_fact_schaden = oddwh{[Schema=\"finmains\",Item=\"fact_schaden\"]}[Data],",
+                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_fact_schaden,{{\"berichtsjahr\", \"Jahr\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim Schaden Art_with_translation",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Schaden Art",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bdd75aae-95ea-4890-8a3e-8ed442fac123",
+            "sourceColumn": "Schaden Art",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art Gruppe",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3ee82f83-f81c-4ffd-977a-426f4da5590d",
+            "sourceColumn": "Schaden Art Gruppe",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "schaden_art_hk",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "20ac800e-802a-4420-b84f-97953d65b969",
+            "sourceColumn": "schaden_art_hk",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art_FR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a7c7aae-980d-49ae-839d-45dd2128f477",
+            "sourceColumn": "Schaden Art_FR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art_EN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "823562fa-17ae-465e-97de-db38095575d8",
+            "sourceColumn": "Schaden Art_EN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art_IT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fabe6704-72bb-4d23-8deb-e00dc394673d",
+            "sourceColumn": "Schaden Art_IT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art Gruppe_FR",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ebb8d72b-7e88-4caf-987c-eaf26c98c5eb",
+            "sourceColumn": "Schaden Art Gruppe_FR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art Gruppe_EN",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d14c731b-3cfd-4431-ad47-06efdd5d33f7",
+            "sourceColumn": "Schaden Art Gruppe_EN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Schaden Art Gruppe_IT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5a88e4c5-b404-4454-b775-4926b3fd7018",
+            "sourceColumn": "Schaden Art Gruppe_IT",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "925e1178-f0e7-4b75-b020-6fee62bcf421",
+        "partitions": [
+          {
+            "name": "Dim Schaden Art_with_translation",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"1VfNbiS3EX4VYs9aoJv9x94bf5rJYmV44XX2EMMHqpszQyyHPWGz5VjPkoNh+BDlnCfIvFiK7JmRZqRN5PXFBgQNm6wqVhU/flX87rtX1Nq13mrjNPqzWoXdypp+E15dPV6Y3YCY9vNq2pyJ4KphbckZ5lVBmjyTrBYtzQjFvK1JxUHkGz3tRjepG2NN2N+j3twaq9F6f+/2915ZDTJ/0k7DEF2bRezHJ3o/ofUio58x+WAL6YB2flzpaTKjc9qemVcQxcMqTNgX7If0mY5+9f0V5Gx7M1vlAqRMG3ujN2Dazg50wNI7r9ynjTYxQW1Wd23FWd0UUpCqIwLXbccYLiVvSJaByLdemQB5dmFC2/39YHo1/x2ptEMYjdcTCH09h50KBoTQVkcRi4LXKiS1xUgIKn6ZRcCcLHijrAGRr5RVg4n5eGutg3gOcyEYlYJ67oBfgAEmZSZIWzaCUVrwVuACd52gdce7Qhb5Mwf29Ijev/RYzs/i94CFzqbDU37qN/tfhgQBqWftX1+h09rrlL4Pqt8cpW61nyCDkFC3jjcJt21T5aKiohGVKHJKqaxbittc4i6PN0ns79f7nwEl+3u7v092D+g4bmPRoLZqHeMUyrkR6eNCnKLTNAM0e40M/HOAhSvkzfS3WU/IqTB7baeYtGHcRiMTiji8AczFLSRsdbWIwTYbdaf8MB2zuNM+/HjYG4wftlm2ND183UG+NOpHF/yI1tYcPbhCBtScM0fLBlJ8nNqqoBfwpjT7H7S/mdQ8rZS1qDPuTtuL24ZlJ1tZtVnbSdoxTJgoGiG4rOEPZzgCDVzVaNDI61vtZrRTPoCL1mgPq9fjNKFxFd0btzGUAdhqmJVdNAcTFBoM6A4wHB+t65dcsIsQ3o0AyU/B3F5EIWWTtzyrMeWiycqK47ZoqWRdwxiRon0cxVoZB3kFQz0Yinvz0weyh2i08s649fQoiKQCjt2meNazGtTajS8JIkH7iyCeUZljWfKuk7LjpKp5WcTzkkAcgjZyMXrAWvyZx378w+P2nZoDWElnDMQcUpYeJktR04JUZVmzlpYt4ZgAiInkQggGdWK597v9vyMyhN6Nk3k0Un4hz/2/QsrASfJ6VC5FOZxU3gNXhIhafZwcFweTW5/zryVdAbATBc1ZxXDbsBwIntYVq3GekchLvY9VK6SRfjwYf7NvX41Qv1Zq4+/0vH593p6crcF3LtuCdLiQTdHIoqRlzgpek47UUuTAB2dI8s93JRD2uB1hUh83QLd6Y3pYOtWH/wEUf1E3DlZvtYH7BhUZbaPJqPdxf7+JtKMRiMGsnv3ljlEqKY4Pik9y8gbt/3HjzTqVgScZqXFTl1BCioo3LZMNLnNeMkFKHM+uOvPjIfT//PQG0Tn4Jzl4g74Om3T5Lx0DBQtX5LcF9n5ldapdj8mwLmuaZaJjvIEmSpKyEKXMStkI2lZdXYDIB42mce4XBufLleBwJi9hs280gGkCwprDXTxON2iv0V9/0CZ5UpeMSUrrvGQZKQlpmq5pIJtUiqatOV46lxD5dnQIqvJ6KQXXGgaRYQ5LR7kFJlYfxFKWJzTNPWBogrnU6sUco5uIsE2aiKmFmqO2C6F80Bpo93pehXjUYaFd6P8cYM+HC879VcIMNzLPaVcBPrKuyFsCtRSaEPhsaU3J2Q3aKm+C2QK5Kui3gG1d6rjC0XbKtIfGEQRujUoJipf+JPDZe2QW2wfj2kOrBWwEbiZ2MNFCMmB+d/6k4wECCICes0r4RfWSZ7ITQLyc5awrOCsrSQmuZFHjWlRZ9wCgU+WD0pOCtw9AuihzJzxd1qo/ep39ENKZ7n/x//dRRiXN4G0CLUdZFNBhdZjxFi563hRdVxL82UfZZpx2UHRjsxhjfut+7ZsM9PWQ9F/0Ivt2DKn1/IuLDWPkI4kFYKCjmBWibSmRddFgJusSc5ILFnc96Jz9plz3vQGQhfPhW7cMFwr+qP0nvfHTpP2t6fXrj+eIvKTHtoGmoBasIR30p6SCFjUrM6DsjBPCG34GqoPN2LVaaECN7+PzdCFHSNVqZfqTzOcxMmi7SMFnbF2jndEui1/KqDHKfmM05EGjlXHK3Zn4XESwYOcp6GdCzzrKSZMBYZIGi0xmPG9LAW81xklGsYg9mokXGryJ8IefZLk3+38uj7aPQCrjfJqOT1Do109LOqpBE3XyKM59UYTf/xc=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Schaden Art\" = _t, #\"Schaden Art Gruppe\" = _t, schaden_art_hk = _t, #\"Schaden Art_FR\" = _t, #\"Schaden Art_EN\" = _t, #\"Schaden Art_IT\" = _t, #\"Schaden Art Gruppe_FR\" = _t, #\"Schaden Art Gruppe_EN\" = _t, #\"Schaden Art Gruppe_IT\" = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Schaden Art\", type text}, {\"Schaden Art Gruppe\", type text}, {\"schaden_art_hk\", type text}, {\"Schaden Art_FR\", type text}, {\"Schaden Art_EN\", type text}, {\"Schaden Art_IT\", type text}, {\"Schaden Art Gruppe_FR\", type text}, {\"Schaden Art Gruppe_EN\", type text}, {\"Schaden Art Gruppe_IT\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

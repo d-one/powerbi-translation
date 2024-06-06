@@ -1,0 +1,8 @@
+,Type,SemanticCompleteName,SemanticEntityName,AggregationFunction,Possible,DE
+8,Column,Dim Schaden Art_with_translation.Schaden Art,Schaden Art,,1,Schaden Art
+9,Column,Dim Schaden Art_with_translation.Schaden Art Gruppe,Schaden Art Gruppe,,1,Schaden Art Gruppe
+11,Column,Dim Versicherer.Versicherer,Versicherer,,1,Versicherer
+0,Column,Fact.Jahr,Jahr,,1,Jahr
+1,Measure,Fact.Schaden Netto MCHF,Schaden Netto MCHF,,1,Schaden Netto MCHF
+3,Measure,Fact.Schadenquote,Schadenquote,,1,Schadenquote
+2,Measure,Fact.Verdiente Prämien MCHF,Verdiente Prämien MCHF,,1,Verdiente Prämien MCHF

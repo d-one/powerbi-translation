@@ -1,0 +1,1732 @@
+{
+    "compatibilityLevel": 1567,
+    "model": {
+        "annotations": [
+            {
+                "name": "PBI_QueryOrder",
+                "value": "[\"Dim Schaden Art\",\"Dim Versicherer\",\"Fact\",\"Dim Schaden Art_with_translation\"]"
+            },
+            {
+                "name": "__PBI_TimeIntelligenceEnabled",
+                "value": "1"
+            },
+            {
+                "name": "PBIDesktopVersion",
+                "value": "2.129.1229.0 (24.05)"
+            },
+            {
+                "name": "PBI_ProTooling",
+                "value": "[\"DevMode\"]"
+            }
+        ],
+        "culture": "en-US",
+        "cultures": [
+            {
+                "name": "en-US",
+                "linguisticMetadata": {
+                    "content": {
+                        "Language": "en-US",
+                        "Version": "1.0.0"
+                    },
+                    "contentType": "json"
+                }
+            }
+        ],
+        "dataAccessOptions": {
+            "legacyRedirects": true,
+            "returnErrorValuesAsNull": true
+        },
+        "defaultPowerBIDataSourceVersion": "powerBI_V3",
+        "relationships": [
+            {
+                "name": "AutoDetected_90d51fc5-7fcc-4401-854f-2a9a8ed3d2f2",
+                "fromColumn": "schaden_art_hk",
+                "fromTable": "Fact",
+                "toColumn": "schaden_art_hk",
+                "toTable": "Dim Schaden Art"
+            },
+            {
+                "name": "AutoDetected_6f12dc11-3e7b-40cf-864d-7605597c1808",
+                "fromColumn": "versicherer_hk",
+                "fromTable": "Fact",
+                "toColumn": "versicherer_hk",
+                "toTable": "Dim Versicherer"
+            },
+            {
+                "name": "AutoDetected_d10a6936-7d36-4873-a9ed-4dbded8a8323",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "Schaden Art",
+                "fromTable": "Dim Schaden Art_with_translation",
+                "isActive": false,
+                "toColumn": "Schaden Art",
+                "toTable": "Dim Schaden Art"
+            },
+            {
+                "name": "AutoDetected_fae0eaa9-34b7-4389-becf-7b8ddb5b1a0d",
+                "fromColumn": "schaden_art_hk",
+                "fromTable": "Fact",
+                "toColumn": "schaden_art_hk",
+                "toTable": "Dim Schaden Art_with_translation"
+            },
+            {
+                "name": "95dfe54f-a3c0-4b08-86fd-6e7b412eaa74",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column"
+            },
+            {
+                "name": "e5c42660-31ad-4a0a-978d-a3a1cec3257e",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column"
+            },
+            {
+                "name": "183e4cb9-6ba5-4944-bf55-ba2f0cda51f6",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Dim Versicherer_Versicherer Column"
+            },
+            {
+                "name": "e08eba9b-d120-4c23-b4ad-246df986ff99",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Fact_Jahr Column"
+            },
+            {
+                "name": "8be6db5b-d315-4338-acd5-3463620a7886",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Fact_Schaden Netto MCHF Measure"
+            },
+            {
+                "name": "b6acf7dc-28fe-4041-a14b-acc138957e85",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Fact_Schadenquote Measure"
+            },
+            {
+                "name": "9308f9a8-df29-4245-b75e-1d6873ea8b1b",
+                "crossFilteringBehavior": "bothDirections",
+                "fromCardinality": "one",
+                "fromColumn": "LanguageCode",
+                "fromTable": "LanguageSelection",
+                "toColumn": "LanguageCode",
+                "toTable": "ZZ FP Fact_Verdiente Prämien MCHF Measure"
+            }
+        ],
+        "sourceQueryCulture": "en-US",
+        "tables": [
+            {
+                "name": "Dim Schaden Art",
+                "annotations": [
+                    {
+                        "name": "PBI_ResultType",
+                        "value": "Table"
+                    }
+                ],
+                "changedProperties": [
+                    {
+                        "property": "Name"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "Schaden Art",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "e97250a3-a101-4b15-beaa-d590c87af875",
+                        "sourceColumn": "Schaden Art",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art Gruppe",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "121fa3b3-112a-4e3f-b22a-3967a8405e07",
+                        "sourceColumn": "Schaden Art Gruppe",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "schaden_art_hk",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isHidden": true,
+                        "lineageTag": "5068dcd9-8f20-4a75-b2c9-47ea9796e402",
+                        "sourceColumn": "schaden_art_hk",
+                        "summarizeBy": "none"
+                    }
+                ],
+                "hierarchies": [
+                    {
+                        "name": "Schaden Art Hierarchie",
+                        "levels": [
+                            {
+                                "name": "Schaden Art Gruppe",
+                                "column": "Schaden Art Gruppe",
+                                "lineageTag": "400b4995-5309-4c23-b40a-c5f4cf1ed86d",
+                                "ordinal": 0
+                            },
+                            {
+                                "name": "Schaden Art",
+                                "column": "Schaden Art",
+                                "lineageTag": "336b762e-b020-4cc4-90d7-19b55d1f13cb",
+                                "ordinal": 1
+                            }
+                        ],
+                        "lineageTag": "0cb1fd1e-ecf4-42f6-9b74-222972778d01"
+                    }
+                ],
+                "lineageTag": "aeb42133-4aa5-4d02-977c-e471dba02237",
+                "partitions": [
+                    {
+                        "name": "Dim Schaden Art",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "let",
+                                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                                "    finmains_dim_schaden = oddwh{[Schema=\"finmains\",Item=\"dim_schaden\"]}[Data],",
+                                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_dim_schaden,{{\"schaden_art\", \"Schaden Art\"}, {\"schaden_art_group\", \"Schaden Art Gruppe\"}})",
+                                "in",
+                                "    #\"Renamed Columns\""
+                            ],
+                            "type": "m"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "DateTableTemplate_5e0ebd0d-b5db-46a1-992d-294b1c5290cb",
+                "annotations": [
+                    {
+                        "name": "__PBI_TemplateDateTable",
+                        "value": "true"
+                    },
+                    {
+                        "name": "DefaultItem",
+                        "value": "DateHierarchy"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "Date",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            }
+                        ],
+                        "dataCategory": "PaddedDateTableDates",
+                        "dataType": "dateTime",
+                        "isHidden": true,
+                        "isNameInferred": true,
+                        "lineageTag": "42ac3b57-7ff8-4593-b26f-cec6a0e24449",
+                        "sourceColumn": "[Date]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "Year",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "Year"
+                            }
+                        ],
+                        "dataCategory": "Years",
+                        "dataType": "int64",
+                        "expression": "YEAR([Date])",
+                        "isHidden": true,
+                        "lineageTag": "4826d4c5-5c88-45ab-99e0-dccb216bb454",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    },
+                    {
+                        "name": "MonthNo",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "MonthNumber"
+                            }
+                        ],
+                        "dataCategory": "MonthOfYear",
+                        "dataType": "int64",
+                        "expression": "MONTH([Date])",
+                        "isHidden": true,
+                        "lineageTag": "bd53cc1c-9893-44f9-9ea7-08c35063d7ff",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    },
+                    {
+                        "name": "Month",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "Month"
+                            }
+                        ],
+                        "dataCategory": "Months",
+                        "dataType": "string",
+                        "expression": "FORMAT([Date], \"MMMM\")",
+                        "isHidden": true,
+                        "lineageTag": "67b82404-45e9-41c8-9f59-568b31514688",
+                        "sortByColumn": "MonthNo",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    },
+                    {
+                        "name": "QuarterNo",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "QuarterNumber"
+                            }
+                        ],
+                        "dataCategory": "QuarterOfYear",
+                        "dataType": "int64",
+                        "expression": "INT(([MonthNo] + 2) / 3)",
+                        "isHidden": true,
+                        "lineageTag": "1372f4d7-ed55-4702-b38c-df239ba4620a",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    },
+                    {
+                        "name": "Quarter",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "Quarter"
+                            }
+                        ],
+                        "dataCategory": "Quarters",
+                        "dataType": "string",
+                        "expression": "\"Qtr \" & [QuarterNo]",
+                        "isHidden": true,
+                        "lineageTag": "164f038a-af04-45f9-a74b-f6b69b44d0b8",
+                        "sortByColumn": "QuarterNo",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    },
+                    {
+                        "name": "Day",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            },
+                            {
+                                "name": "TemplateId",
+                                "value": "Day"
+                            }
+                        ],
+                        "dataCategory": "DayOfMonth",
+                        "dataType": "int64",
+                        "expression": "DAY([Date])",
+                        "isHidden": true,
+                        "lineageTag": "213d22ca-814a-4fb1-bf03-fc19a3cd1572",
+                        "summarizeBy": "none",
+                        "type": "calculated"
+                    }
+                ],
+                "hierarchies": [
+                    {
+                        "name": "Date Hierarchy",
+                        "annotations": [
+                            {
+                                "name": "TemplateId",
+                                "value": "DateHierarchy"
+                            }
+                        ],
+                        "levels": [
+                            {
+                                "name": "Year",
+                                "column": "Year",
+                                "lineageTag": "b1727061-639b-4463-979d-4662ef58dfe0",
+                                "ordinal": 0
+                            },
+                            {
+                                "name": "Quarter",
+                                "column": "Quarter",
+                                "lineageTag": "87b41f4d-3617-454e-8397-9f5362849989",
+                                "ordinal": 1
+                            },
+                            {
+                                "name": "Month",
+                                "column": "Month",
+                                "lineageTag": "9da1fa8a-8bd5-416b-a766-e562cb051be5",
+                                "ordinal": 2
+                            },
+                            {
+                                "name": "Day",
+                                "column": "Day",
+                                "lineageTag": "4621a887-76c7-4ade-abf0-71f098e52e01",
+                                "ordinal": 3
+                            }
+                        ],
+                        "lineageTag": "c5613ede-9523-48b1-9189-94639b8bfdd6"
+                    }
+                ],
+                "isHidden": true,
+                "isPrivate": true,
+                "lineageTag": "de798f81-fa12-4e38-afa8-3a950a30a854",
+                "partitions": [
+                    {
+                        "name": "DateTableTemplate_5e0ebd0d-b5db-46a1-992d-294b1c5290cb",
+                        "mode": "import",
+                        "source": {
+                            "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Dim Versicherer",
+                "annotations": [
+                    {
+                        "name": "PBI_ResultType",
+                        "value": "Table"
+                    }
+                ],
+                "changedProperties": [
+                    {
+                        "property": "Name"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "versicherer_hk",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isHidden": true,
+                        "lineageTag": "642b37c5-b7cf-4103-96a2-1ab107235bca",
+                        "sourceColumn": "versicherer_hk",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Versicherer",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "fa9c5063-eed0-42f6-8a8e-cf215a5e882b",
+                        "sourceColumn": "Versicherer",
+                        "summarizeBy": "none"
+                    }
+                ],
+                "lineageTag": "260d6643-611d-46cb-921c-a8cf9841f29a",
+                "partitions": [
+                    {
+                        "name": "Dim Versicherer",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "let",
+                                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                                "    finmains_dim_versicherer = oddwh{[Schema=\"finmains\",Item=\"dim_versicherer\"]}[Data],",
+                                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_dim_versicherer,{{\"versicherer\", \"Versicherer\"}})",
+                                "in",
+                                "    #\"Renamed Columns\""
+                            ],
+                            "type": "m"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Fact",
+                "annotations": [
+                    {
+                        "name": "PBI_ResultType",
+                        "value": "Table"
+                    }
+                ],
+                "changedProperties": [
+                    {
+                        "property": "Name"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "schaden_art_hk",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isHidden": true,
+                        "lineageTag": "d5ae51de-4660-4e9f-a159-edb48ead1ec1",
+                        "sourceColumn": "schaden_art_hk",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "versicherer_hk",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isHidden": true,
+                        "lineageTag": "cdbd0f1f-46c4-4d3c-ab0c-558b21fe02b4",
+                        "sourceColumn": "versicherer_hk",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Jahr",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "User"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "lineageTag": "ef9f79de-ffda-43a3-8a31-49fdd7bc4c07",
+                        "sourceColumn": "Jahr",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "verdiente_praemien_mchf",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            },
+                            {
+                                "name": "PBI_FormatHint",
+                                "value": "{\"isGeneralNumber\":true}"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "double",
+                        "isHidden": true,
+                        "lineageTag": "844b081a-7b76-40a3-877e-54ded9a6a7e8",
+                        "sourceColumn": "verdiente_praemien_mchf",
+                        "summarizeBy": "sum"
+                    },
+                    {
+                        "name": "netto_schaden_mchf",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            },
+                            {
+                                "name": "PBI_FormatHint",
+                                "value": "{\"isGeneralNumber\":true}"
+                            }
+                        ],
+                        "changedProperties": [
+                            {
+                                "property": "IsHidden"
+                            }
+                        ],
+                        "dataType": "double",
+                        "isHidden": true,
+                        "lineageTag": "2f876856-09db-4a68-adff-63e823195a53",
+                        "sourceColumn": "netto_schaden_mchf",
+                        "summarizeBy": "sum"
+                    }
+                ],
+                "lineageTag": "94906ac5-d84a-4812-8a7c-a62fcfa29b25",
+                "measures": [
+                    {
+                        "name": "Schaden Netto MCHF",
+                        "annotations": [
+                            {
+                                "name": "PBI_FormatHint",
+                                "value": "{\"isDecimal\":true}"
+                            }
+                        ],
+                        "expression": "sum('Fact'[netto_schaden_mchf])",
+                        "formatString": "#,0",
+                        "lineageTag": "1016c38a-de8f-404c-aebf-04c6bdf07bbc"
+                    },
+                    {
+                        "name": "Verdiente Prämien MCHF",
+                        "annotations": [
+                            {
+                                "name": "PBI_FormatHint",
+                                "value": "{\"isDecimal\":true}"
+                            }
+                        ],
+                        "expression": "sum('Fact'[verdiente_praemien_mchf])",
+                        "formatString": "#,0",
+                        "lineageTag": "9e55340e-a68d-4b87-a44e-baa81a26e36a"
+                    },
+                    {
+                        "name": "Schadenquote",
+                        "expression": "DIVIDE([Schaden Netto MCHF], [Verdiente Prämien MCHF])",
+                        "formatString": "0.0%;-0.0%;0.0%",
+                        "lineageTag": "3124441c-8f5c-4a67-8b7a-ccb495b65b38"
+                    }
+                ],
+                "partitions": [
+                    {
+                        "name": "Fact",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "let",
+                                "    Source = Sql.Databases(\"opendata-dwh.database.windows.net\"),",
+                                "    oddwh = Source{[Name=\"oddwh\"]}[Data],",
+                                "    finmains_fact_schaden = oddwh{[Schema=\"finmains\",Item=\"fact_schaden\"]}[Data],",
+                                "    #\"Renamed Columns\" = Table.RenameColumns(finmains_fact_schaden,{{\"berichtsjahr\", \"Jahr\"}})",
+                                "in",
+                                "    #\"Renamed Columns\""
+                            ],
+                            "type": "m"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "Dim Schaden Art_with_translation",
+                "annotations": [
+                    {
+                        "name": "PBI_NavigationStepName",
+                        "value": "Navigation"
+                    },
+                    {
+                        "name": "PBI_ResultType",
+                        "value": "Table"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "Schaden Art",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "bdd75aae-95ea-4890-8a3e-8ed442fac123",
+                        "sourceColumn": "Schaden Art",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art Gruppe",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "3ee82f83-f81c-4ffd-977a-426f4da5590d",
+                        "sourceColumn": "Schaden Art Gruppe",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "schaden_art_hk",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "20ac800e-802a-4420-b84f-97953d65b969",
+                        "sourceColumn": "schaden_art_hk",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art_FR",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "0a7c7aae-980d-49ae-839d-45dd2128f477",
+                        "sourceColumn": "Schaden Art_FR",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art_EN",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "823562fa-17ae-465e-97de-db38095575d8",
+                        "sourceColumn": "Schaden Art_EN",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art_IT",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "fabe6704-72bb-4d23-8deb-e00dc394673d",
+                        "sourceColumn": "Schaden Art_IT",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art Gruppe_FR",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "ebb8d72b-7e88-4caf-987c-eaf26c98c5eb",
+                        "sourceColumn": "Schaden Art Gruppe_FR",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art Gruppe_EN",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "d14c731b-3cfd-4431-ad47-06efdd5d33f7",
+                        "sourceColumn": "Schaden Art Gruppe_EN",
+                        "summarizeBy": "none"
+                    },
+                    {
+                        "name": "Schaden Art Gruppe_IT",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "lineageTag": "5a88e4c5-b404-4454-b775-4926b3fd7018",
+                        "sourceColumn": "Schaden Art Gruppe_IT",
+                        "summarizeBy": "none"
+                    }
+                ],
+                "lineageTag": "925e1178-f0e7-4b75-b020-6fee62bcf421",
+                "partitions": [
+                    {
+                        "name": "Dim Schaden Art_with_translation",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "let",
+                                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"1VfNbiS3EX4VYs9aoJv9x94bf5rJYmV44XX2EMMHqpszQyyHPWGz5VjPkoNh+BDlnCfIvFiK7JmRZqRN5PXFBgQNm6wqVhU/flX87rtX1Nq13mrjNPqzWoXdypp+E15dPV6Y3YCY9vNq2pyJ4KphbckZ5lVBmjyTrBYtzQjFvK1JxUHkGz3tRjepG2NN2N+j3twaq9F6f+/2915ZDTJ/0k7DEF2bRezHJ3o/ofUio58x+WAL6YB2flzpaTKjc9qemVcQxcMqTNgX7If0mY5+9f0V5Gx7M1vlAqRMG3ujN2Dazg50wNI7r9ynjTYxQW1Wd23FWd0UUpCqIwLXbccYLiVvSJaByLdemQB5dmFC2/39YHo1/x2ptEMYjdcTCH09h50KBoTQVkcRi4LXKiS1xUgIKn6ZRcCcLHijrAGRr5RVg4n5eGutg3gOcyEYlYJ67oBfgAEmZSZIWzaCUVrwVuACd52gdce7Qhb5Mwf29Ijev/RYzs/i94CFzqbDU37qN/tfhgQBqWftX1+h09rrlL4Pqt8cpW61nyCDkFC3jjcJt21T5aKiohGVKHJKqaxbittc4i6PN0ns79f7nwEl+3u7v092D+g4bmPRoLZqHeMUyrkR6eNCnKLTNAM0e40M/HOAhSvkzfS3WU/IqTB7baeYtGHcRiMTiji8AczFLSRsdbWIwTYbdaf8MB2zuNM+/HjYG4wftlm2ND183UG+NOpHF/yI1tYcPbhCBtScM0fLBlJ8nNqqoBfwpjT7H7S/mdQ8rZS1qDPuTtuL24ZlJ1tZtVnbSdoxTJgoGiG4rOEPZzgCDVzVaNDI61vtZrRTPoCL1mgPq9fjNKFxFd0btzGUAdhqmJVdNAcTFBoM6A4wHB+t65dcsIsQ3o0AyU/B3F5EIWWTtzyrMeWiycqK47ZoqWRdwxiRon0cxVoZB3kFQz0Yinvz0weyh2i08s649fQoiKQCjt2meNazGtTajS8JIkH7iyCeUZljWfKuk7LjpKp5WcTzkkAcgjZyMXrAWvyZx378w+P2nZoDWElnDMQcUpYeJktR04JUZVmzlpYt4ZgAiInkQggGdWK597v9vyMyhN6Nk3k0Un4hz/2/QsrASfJ6VC5FOZxU3gNXhIhafZwcFweTW5/zryVdAbATBc1ZxXDbsBwIntYVq3GekchLvY9VK6SRfjwYf7NvX41Qv1Zq4+/0vH593p6crcF3LtuCdLiQTdHIoqRlzgpek47UUuTAB2dI8s93JRD2uB1hUh83QLd6Y3pYOtWH/wEUf1E3DlZvtYH7BhUZbaPJqPdxf7+JtKMRiMGsnv3ljlEqKY4Pik9y8gbt/3HjzTqVgScZqXFTl1BCioo3LZMNLnNeMkFKHM+uOvPjIfT//PQG0Tn4Jzl4g74Om3T5Lx0DBQtX5LcF9n5ldapdj8mwLmuaZaJjvIEmSpKyEKXMStkI2lZdXYDIB42mce4XBufLleBwJi9hs280gGkCwprDXTxON2iv0V9/0CZ5UpeMSUrrvGQZKQlpmq5pIJtUiqatOV46lxD5dnQIqvJ6KQXXGgaRYQ5LR7kFJlYfxFKWJzTNPWBogrnU6sUco5uIsE2aiKmFmqO2C6F80Bpo93pehXjUYaFd6P8cYM+HC879VcIMNzLPaVcBPrKuyFsCtRSaEPhsaU3J2Q3aKm+C2QK5Kui3gG1d6rjC0XbKtIfGEQRujUoJipf+JPDZe2QW2wfj2kOrBWwEbiZ2MNFCMmB+d/6k4wECCICes0r4RfWSZ7ITQLyc5awrOCsrSQmuZFHjWlRZ9wCgU+WD0pOCtw9AuihzJzxd1qo/ep39ENKZ7n/x//dRRiXN4G0CLUdZFNBhdZjxFi563hRdVxL82UfZZpx2UHRjsxhjfut+7ZsM9PWQ9F/0Ivt2DKn1/IuLDWPkI4kFYKCjmBWibSmRddFgJusSc5ILFnc96Jz9plz3vQGQhfPhW7cMFwr+qP0nvfHTpP2t6fXrj+eIvKTHtoGmoBasIR30p6SCFjUrM6DsjBPCG34GqoPN2LVaaECN7+PzdCFHSNVqZfqTzOcxMmi7SMFnbF2jndEui1/KqDHKfmM05EGjlXHK3Zn4XESwYOcp6GdCzzrKSZMBYZIGi0xmPG9LAW81xklGsYg9mokXGryJ8IefZLk3+38uj7aPQCrjfJqOT1Do109LOqpBE3XyKM59UYTf/xc=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Schaden Art\" = _t, #\"Schaden Art Gruppe\" = _t, schaden_art_hk = _t, #\"Schaden Art_FR\" = _t, #\"Schaden Art_EN\" = _t, #\"Schaden Art_IT\" = _t, #\"Schaden Art Gruppe_FR\" = _t, #\"Schaden Art Gruppe_EN\" = _t, #\"Schaden Art Gruppe_IT\" = _t]),",
+                                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Schaden Art\", type text}, {\"Schaden Art Gruppe\", type text}, {\"schaden_art_hk\", type text}, {\"Schaden Art_FR\", type text}, {\"Schaden Art_EN\", type text}, {\"Schaden Art_IT\", type text}, {\"Schaden Art Gruppe_FR\", type text}, {\"Schaden Art Gruppe_EN\", type text}, {\"Schaden Art Gruppe_IT\", type text}})",
+                                "in",
+                                "    #\"Changed Type\""
+                            ],
+                            "type": "m"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "4439539b-688c-42e7-b603-3a1907767d29"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "ebb0f792-c5a3-4d23-b138-6baaa599d126",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "a80cdd34-c4cc-485e-9da2-1970428a3b19",
+                        "sortByColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "f1b4a617-0413-47bb-ae38-29c59cb5441d",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "f93a9eda-4931-4221-866d-ec529aa029ca",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "c05cd4cf-c640-4e03-8e61-2a13fb313fe4",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Schaden Art\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art]), 0, \"DE\"),",
+                                "    (\"Claim type\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art_EN]), 1, \"EN\"),",
+                                "    (\"Type de sinistre\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art_FR]), 2, \"FR\"),",
+                                "    (\"Tipo di sinistro\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art_IT]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "49ee0d85-00a2-4c50-8c4a-04f1e77143c2"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "579757b5-5813-4c35-b5e5-e6f6b802f1d1",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "23553316-e175-466c-ba4c-4643c9e0988f",
+                        "sortByColumn": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "354de678-d243-4d70-a309-5e538eea91b6",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "e033ba4b-3a4a-4872-bbd3-6f0ec8907bb3",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "8b9725aa-51d3-43f3-bb14-c6138752805c",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Schaden Art Gruppe\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art Gruppe]), 0, \"DE\"),",
+                                "    (\"Claim type group\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art Gruppe_EN]), 1, \"EN\"),",
+                                "    (\"Groupe de type de sinistre\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art Gruppe_FR]), 2, \"FR\"),",
+                                "    (\"Gruppo di tipo di sinistro\", NAMEOF('Dim Schaden Art_with_translation'[Schaden Art Gruppe_IT]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Dim Versicherer_Versicherer Column",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "de983758-c5e5-4922-a88a-fd8a29246bc2"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Dim Versicherer_Versicherer Column",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "ce46e99b-2692-4d16-92f9-11bb493cea67",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Dim Versicherer_Versicherer Column Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Dim Versicherer_Versicherer Column Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Versicherer_Versicherer Column Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "12b34ef3-25db-43ef-b939-c98852f5c313",
+                        "sortByColumn": "ZZ FP Dim Versicherer_Versicherer Column Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Dim Versicherer_Versicherer Column Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "b6685041-48fe-4c46-ba3e-4aa6768585a2",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "606439b7-6d11-4766-b7d2-818daeb7b2da",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "7894693d-7b24-4ef1-95bd-4783e0a71ce0",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Dim Versicherer_Versicherer Column",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Versicherer\", NAMEOF('Dim Versicherer'[Versicherer]), 0, \"DE\"),",
+                                "    (\"Insurer\", NAMEOF('Dim Versicherer'[Versicherer]), 1, \"EN\"),",
+                                "    (\"Assureur\", NAMEOF('Dim Versicherer'[Versicherer]), 2, \"FR\"),",
+                                "    (\"Assicuratore\", NAMEOF('Dim Versicherer'[Versicherer]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Fact_Jahr Column",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "1831b757-3456-4d17-a756-2aefee00bff5"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Fact_Jahr Column",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "e822718b-5133-4a78-ba37-c7beede2ceaa",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Fact_Jahr Column Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Fact_Jahr Column Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Jahr Column Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "31b9a3ba-2e9c-4c45-bb9c-b78562f31c3b",
+                        "sortByColumn": "ZZ FP Fact_Jahr Column Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Jahr Column Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "6df7d658-eee7-4ad7-a4cc-cf007cdf453d",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "980031fa-a109-48b3-925f-9cb7dca26889",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "5686c37c-ad56-41ca-9fc9-3b2d22fc1362",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Fact_Jahr Column",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Jahr\", NAMEOF('Fact'[Jahr]), 0, \"DE\"),",
+                                "    (\"Year\", NAMEOF('Fact'[Jahr]), 1, \"EN\"),",
+                                "    (\"Année\", NAMEOF('Fact'[Jahr]), 2, \"FR\"),",
+                                "    (\"Anno\", NAMEOF('Fact'[Jahr]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Fact_Schaden Netto MCHF Measure",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "57215597-992a-4af4-be7e-b6f97eec96de"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Fact_Schaden Netto MCHF Measure",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "92c68d6b-26fa-4d9b-b21d-fe2ba6f1ddbb",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Fact_Schaden Netto MCHF Measure Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Fact_Schaden Netto MCHF Measure Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Schaden Netto MCHF Measure Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "7b167021-5004-4385-985f-e6d4eb185417",
+                        "sortByColumn": "ZZ FP Fact_Schaden Netto MCHF Measure Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Schaden Netto MCHF Measure Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "eb03ba1c-4616-4ee8-a132-54bff3685448",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "8835df74-2562-48dd-9762-262dd518939b",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "6e9a2fbe-4ab1-433d-b464-c51a9b5eb1ca",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Fact_Schaden Netto MCHF Measure",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Schaden Netto MCHF\", NAMEOF('Fact'[Schaden Netto MCHF]), 0, \"DE\"),",
+                                "    (\"Net claims MCHF\", NAMEOF('Fact'[Schaden Netto MCHF]), 1, \"EN\"),",
+                                "    (\"Sinistres nets MCHF\", NAMEOF('Fact'[Schaden Netto MCHF]), 2, \"FR\"),",
+                                "    (\"Sinistri netti MCHF\", NAMEOF('Fact'[Schaden Netto MCHF]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Fact_Schadenquote Measure",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "77d3c0cc-96c5-4f9b-bd85-edb10a0db452"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Fact_Schadenquote Measure",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "c459be10-48ab-41fb-838f-864eddf1ad3c",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Fact_Schadenquote Measure Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Fact_Schadenquote Measure Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Schadenquote Measure Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "c46adc6f-ebad-424b-9138-9a030aff077a",
+                        "sortByColumn": "ZZ FP Fact_Schadenquote Measure Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Schadenquote Measure Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "017d6d62-eafa-42a1-81c4-3e5dfbb8435e",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "60bd301b-23b9-4d1c-84da-ba6308ee981e",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "f624129f-96f3-4dd9-aaff-c2dc8db18ac0",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Fact_Schadenquote Measure",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Schadenquote\", NAMEOF('Fact'[Schadenquote]), 0, \"DE\"),",
+                                "    (\"Loss ratio\", NAMEOF('Fact'[Schadenquote]), 1, \"EN\"),",
+                                "    (\"Taux de sinistralité\", NAMEOF('Fact'[Schadenquote]), 2, \"FR\"),",
+                                "    (\"Rapporto sinistri\", NAMEOF('Fact'[Schadenquote]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "ZZ FP Fact_Verdiente Prämien MCHF Measure",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "10faa8df-58ba-45bf-9f9a-a768717ce0f3"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "ZZ FP Fact_Verdiente Prämien MCHF Measure",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "9f9fdcb1-84e8-4f6e-af5f-0e7e0fea0c73",
+                        "relatedColumnDetails": {
+                            "groupByColumns": [
+                                {
+                                    "groupingColumn": "ZZ FP Fact_Verdiente Prämien MCHF Measure Fields"
+                                }
+                            ]
+                        },
+                        "sortByColumn": "ZZ FP Fact_Verdiente Prämien MCHF Measure Order",
+                        "sourceColumn": "[Value1]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Verdiente Prämien MCHF Measure Fields",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "extendedProperties": [
+                            {
+                                "name": "ParameterMetadata",
+                                "type": "json",
+                                "value": {
+                                    "kind": 2,
+                                    "version": 3
+                                }
+                            }
+                        ],
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "8dc3a329-02d8-49fe-8457-6c12c9b2da99",
+                        "sortByColumn": "ZZ FP Fact_Verdiente Prämien MCHF Measure Order",
+                        "sourceColumn": "[Value2]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "ZZ FP Fact_Verdiente Prämien MCHF Measure Order",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "int64",
+                        "formatString": "0",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": false,
+                        "lineageTag": "5c8dbe73-d76e-4551-8e0d-cb4081d7f4a9",
+                        "sourceColumn": "[Value3]",
+                        "summarizeBy": "sum",
+                        "type": "calculatedTableColumn"
+                    },
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": false,
+                        "lineageTag": "8ca1447c-ef3f-40f7-8a1b-effe92732419",
+                        "sourceColumn": "[Value4]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "9c6639b8-716b-4a0f-80af-7508f234a93c",
+                "partitions": [
+                    {
+                        "name": "ZZ FP Fact_Verdiente Prämien MCHF Measure",
+                        "mode": "import",
+                        "source": {
+                            "expression": [
+                                "{",
+                                "    (\"Verdiente Prämien MCHF\", NAMEOF('Fact'[Verdiente Prämien MCHF]), 0, \"DE\"),",
+                                "    (\"Earned premiums MCHF\", NAMEOF('Fact'[Verdiente Prämien MCHF]), 1, \"EN\"),",
+                                "    (\"Primes acquises MCHF\", NAMEOF('Fact'[Verdiente Prämien MCHF]), 2, \"FR\"),",
+                                "    (\"Premi guadagnati MCHF\", NAMEOF('Fact'[Verdiente Prämien MCHF]), 3, \"IT\")",
+                                "}"
+                            ],
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "TitlesTranslations",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "cf86993943664097b25d977abc7bcd6c"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "foo",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isHidden": true,
+                        "isNameInferred": true,
+                        "lineageTag": "11efb3bf-392d-40cd-869e-86bdb578320f",
+                        "sourceColumn": "[foo]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "21ddcf5b-967b-41d4-9921-654b71f906fa",
+                "partitions": [
+                    {
+                        "name": "TitlesTranslations",
+                        "mode": "import",
+                        "source": {
+                            "expression": "DATATABLE(\"foo\", STRING, {{\"dummy\"}})",
+                            "type": "calculated"
+                        }
+                    }
+                ],
+                "measures": [
+                    {
+                        "name": "Total Schadenquote nach Versicherungszweig_title",
+                        "expression": [
+                            "SWITCH(MIN(LanguageSelection[LanguageCode]),",
+                            "    \"EN\", \"Total loss ratio by insurance branch\",",
+                            "    \"FR\", \"Total des sinistres par branche d'assurance\",",
+                            "    \"IT\", \"Totale rapporto sinistri per ramo assicurativo\",",
+                            "    \"Total Schadenquote nach Versicherungszweig\")"
+                        ],
+                        "lineageTag": "52c994d9-a48e-4e66-a87d-577ce157dde8"
+                    },
+                    {
+                        "name": "Schadenquote Entwicklung_title",
+                        "expression": [
+                            "SWITCH(MIN(LanguageSelection[LanguageCode]),",
+                            "    \"EN\", \"Loss ratio development\",",
+                            "    \"FR\", \"Évolution de la sinistralité\",",
+                            "    \"IT\", \"Sviluppo del rapporto sinistri\",",
+                            "    \"Schadenquote Entwicklung\")"
+                        ],
+                        "lineageTag": "46eefcf7-fe41-4cd6-a25a-143573b9e64d"
+                    }
+                ]
+            },
+            {
+                "name": "LanguageSelection",
+                "annotations": [
+                    {
+                        "name": "PBI_Id",
+                        "value": "cb0a60074ae644a786f2a65d13da3fdf"
+                    }
+                ],
+                "columns": [
+                    {
+                        "name": "LanguageCode",
+                        "annotations": [
+                            {
+                                "name": "SummarizationSetBy",
+                                "value": "Automatic"
+                            }
+                        ],
+                        "dataType": "string",
+                        "isDataTypeInferred": true,
+                        "isNameInferred": true,
+                        "lineageTag": "ef7f7269-250b-4e34-a89a-ccf66313119a",
+                        "sourceColumn": "[LanguageCode]",
+                        "summarizeBy": "none",
+                        "type": "calculatedTableColumn"
+                    }
+                ],
+                "lineageTag": "3233461f-3af7-4c89-bbed-f18c9986d7d6",
+                "partitions": [
+                    {
+                        "name": "LanguageSelection",
+                        "mode": "import",
+                        "source": {
+                            "expression": "DATATABLE(\"LanguageCode\", STRING, {{\"DE\"}, {\"EN\"}, {\"FR\"}, {\"IT\"}})",
+                            "type": "calculated"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

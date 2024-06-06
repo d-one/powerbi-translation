@@ -1,0 +1,138 @@
+{
+  "config": "{\"version\":\"5.52\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.52\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Screenshot_2024-05-14_at_14.103161802900097124.png",
+            "path": "Screenshot_2024-05-14_at_14.103161802900097124.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"relationships\":[{\"source\":\"2763878a2f7d5b7b8cae\",\"target\":\"06f61845b177ac95da80\",\"type\":1}]}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"06f61845b177ac95da80\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.54054054054054,\"y\":390.27027027027026,\"z\":6000,\"width\":556.7567567567568,\"height\":329.72972972972974,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Fact.Jahr\",\"active\":true}],\"Y\":[{\"queryRef\":\"Fact.Schaden Netto MCHF\"},{\"queryRef\":\"Fact.Verdiente Prämien MCHF\"}],\"Y2\":[{\"queryRef\":\"Fact.Schadenquote\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Jahr\"},\"Name\":\"Fact.Jahr\",\"NativeReferenceName\":\"Jahr\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schaden Netto MCHF\"},\"Name\":\"Fact.Schaden Netto MCHF\",\"NativeReferenceName\":\"Schaden Netto MCHF\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Verdiente Prämien MCHF\"},\"Name\":\"Fact.Verdiente Prämien MCHF\",\"NativeReferenceName\":\"Verdiente Prämien MCHF\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schadenquote\"},\"Name\":\"Fact.Schadenquote\",\"NativeReferenceName\":\"Schadenquote\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Jahr\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"secStart\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"secShowAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#AB121A'\"}}}}}},\"selector\":{\"metadata\":\"Fact.Schadenquote\"}},{\"properties\":{\"fillTransparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"metadata\":\"Fact.Schaden Netto MCHF\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"metadata\":\"Fact.Verdiente Prämien MCHF\"}}],\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Right'\"}}},\"matchLineColor\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"enableDetailDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Fact.Schaden Netto MCHF\"}},{\"properties\":{\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Fact.Verdiente Prämien MCHF\"}},{\"properties\":{\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"89L\"}}},\"enableBackground\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Fact.Schadenquote\"}}],\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Schadenquote Entwicklung'\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 329.73,
+          "width": 556.76,
+          "x": 20.54,
+          "y": 390.27,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"15e21c8e7aaa6b00795d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":277.8378378378378,\"y\":139.45945945945945,\"z\":8000,\"width\":256.2162162162162,\"height\":116.75675675675676,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact.Schadenquote\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schadenquote\"},\"Name\":\"Fact.Schadenquote\",\"NativeReferenceName\":\"Schadenquote\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schadenquote\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 116.76,
+          "width": 256.22,
+          "x": 277.84,
+          "y": 139.46,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"2763878a2f7d5b7b8cae\",\"layouts\":[{\"id\":0,\"position\":{\"x\":600,\"y\":59.45945945945946,\"z\":1000,\"width\":665.9459459459459,\"height\":659.4594594594595,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Dim Schaden Art_with_translation.Schaden Art Gruppe\",\"active\":true},{\"queryRef\":\"Dim Schaden Art_with_translation.Schaden Art\",\"active\":true}],\"Values\":[{\"queryRef\":\"Fact.Verdiente Prämien MCHF\"},{\"queryRef\":\"Fact.Schaden Netto MCHF\"},{\"queryRef\":\"Fact.Schadenquote\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"Fact\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Dim Schaden Art_with_translation\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Verdiente Prämien MCHF\"},\"Name\":\"Fact.Verdiente Prämien MCHF\",\"NativeReferenceName\":\"Verdiente Prämien MCHF\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Schadenquote\"},\"Name\":\"Fact.Schadenquote\",\"NativeReferenceName\":\"Schadenquote\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Schaden Netto MCHF\"},\"Name\":\"Fact.Schaden Netto MCHF\",\"NativeReferenceName\":\"Schaden Netto MCHF\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Schaden Art\"},\"Name\":\"Dim Schaden Art_with_translation.Schaden Art\",\"NativeReferenceName\":\"Schaden Art1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Schaden Art Gruppe\"},\"Name\":\"Dim Schaden Art_with_translation.Schaden Art Gruppe\",\"NativeReferenceName\":\"Schaden Art Gruppe1\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"Dim Schaden Art_with_translation.Schaden Art Gruppe\"],\"isPinned\":true},{\"queryRefs\":[\"Dim Schaden Art_with_translation.Schaden Art\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dim Schaden Art_with_translation\"}},\"Property\":\"Schaden Art\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"103.88650901359772D\"}}}},\"selector\":{\"metadata\":\"Fact.Schadenquote\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"101.86928202522762D\"}}}},\"selector\":{\"metadata\":\"Fact.Verdiente Prämien MCHF\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"90.39109051169456D\"}}}},\"selector\":{\"metadata\":\"Fact.Schaden Netto MCHF\"}}],\"grid\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"values\":[{\"properties\":{\"valuesOnRow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"columnFormatting\":[{\"properties\":{\"dataBars\":{\"positiveColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#cccccc'\"}}}}},\"negativeColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}}},\"axisColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'foreground'\"}}}}},\"reverseDirection\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"hideText\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"totalMatchingOption\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}},\"selector\":{\"metadata\":\"Fact.Verdiente Prämien MCHF\"}},{\"properties\":{\"dataBars\":{\"positiveColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#e6e6e6'\"}}}}},\"negativeColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}}},\"axisColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'foreground'\"}}}}},\"reverseDirection\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"hideText\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"totalMatchingOption\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}},\"selector\":{\"metadata\":\"Fact.Schaden Netto MCHF\"}},{\"properties\":{\"dataBars\":{\"positiveColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#D9A3A6'\"}}}}},\"negativeColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}}},\"axisColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'foreground'\"}}}}},\"reverseDirection\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"hideText\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"totalMatchingOption\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}},\"selector\":{\"metadata\":\"Fact.Schadenquote\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Schadenquote nach Versicherungszweig'\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 659.46,
+          "width": 665.95,
+          "x": 600.00,
+          "y": 59.46,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4b4d8d7c9e1aa055d8db\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1149.8057142857142,\"y\":2.9257142857142857,\"z\":4000,\"width\":122.88,\"height\":57.05142857142857,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Screenshot_2024-05-14_at_14.103161802900097124.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 57.05,
+          "width": 122.88,
+          "x": 1149.81,
+          "y": 2.93,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"a7c03d335fbbe9d9baec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.48,\"y\":49.73714285714286,\"z\":5000,\"width\":1244.8914285714286,\"height\":10.24,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}},\"linecapType\":{\"expr\":{\"Literal\":{\"Value\":\"'flat'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"weight\":{\"expr\":{\"Literal\":{\"Value\":\"0.5D\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 10.24,
+          "width": 1244.89,
+          "x": 20.48,
+          "y": 49.74,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"c1527f540800039ed6a5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.37837837837838,\"y\":4.324324324324324,\"z\":3000,\"width\":621.6216216216216,\"height\":45.4054054054054,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}]}]}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"left\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Finma Versicherungsbericht'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'wf_standard-font, helvetica, arial, sans-serif'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"subTitle\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Schadenquote Demo'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 45.41,
+          "width": 621.62,
+          "x": 18.38,
+          "y": 4.32,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"cd6d6311a20e9cd1a696\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.54054054054054,\"y\":139.45945945945945,\"z\":7000,\"width\":256.2162162162162,\"height\":116.75675675675676,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact.Schaden Netto MCHF\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schaden Netto MCHF\"},\"Name\":\"Fact.Schaden Netto MCHF\",\"NativeReferenceName\":\"Schaden Netto MCHF\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Schaden Netto MCHF\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 116.76,
+          "width": 256.22,
+          "x": 20.54,
+          "y": 139.46,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"dee819a845a7f8efdf04\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20.54054054054054,\"y\":60.54054054054054,\"z\":0,\"width\":256.2162162162162,\"height\":78.91891891891892,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"finmains dim_versicherer.versicherer\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Dim Versicherer\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Versicherer\"},\"Name\":\"finmains dim_versicherer.versicherer\",\"NativeReferenceName\":\"Versicherer\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Versicherer\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 78.92,
+          "width": 256.22,
+          "x": 20.54,
+          "y": 60.54,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e48334a7d404d30b192a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":149.1891891891892,\"y\":273.5135135135135,\"z\":9000,\"width\":256.2162162162162,\"height\":116.75675675675676,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact.Verdiente Prämien MCHF\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Verdiente Prämien MCHF\"},\"Name\":\"Fact.Verdiente Prämien MCHF\",\"NativeReferenceName\":\"Verdiente Prämien MCHF\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Verdiente Prämien MCHF\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 116.76,
+          "width": 256.22,
+          "x": 149.19,
+          "y": 273.51,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"eb74a581bcb5f809718f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":276.7567567567567,\"y\":61.62162162162162,\"z\":2000,\"width\":257.2972972972973,\"height\":78.91891891891892,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"finmains fact_schaden.berichtsjahr\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Fact\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Jahr\"},\"Name\":\"finmains fact_schaden.berichtsjahr\",\"NativeReferenceName\":\"Jahr\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 78.92,
+          "width": 257.30,
+          "x": 276.76,
+          "y": 61.62,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

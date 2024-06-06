@@ -1,0 +1,109 @@
+{
+  "name": "{FULL_TABLE_NAME} {TYPE}",
+  "annotations": [
+    {
+      "name": "PBI_Id",
+      "value": "{ID_ANO}"
+    }
+  ],
+  "columns": [
+    {
+      "name": "{FULL_TABLE_NAME} {TYPE}",
+      "annotations": [
+        {
+          "name": "SummarizationSetBy",
+          "value": "Automatic"
+        }
+      ],
+      "dataType": "string",
+      "isDataTypeInferred": true,
+      "isNameInferred": false,
+      "lineageTag": "{ID_COL1}",
+      "relatedColumnDetails": {
+        "groupByColumns": [
+          {
+            "groupingColumn": "{FULL_TABLE_NAME} {TYPE} Fields"
+          }
+        ]
+      },
+      "sortByColumn": "{FULL_TABLE_NAME} {TYPE} Order",
+      "sourceColumn": "[Value1]",
+      "summarizeBy": "none",
+      "type": "calculatedTableColumn"
+    },
+    {
+      "name": "{FULL_TABLE_NAME} {TYPE} Fields",
+      "annotations": [
+        {
+          "name": "SummarizationSetBy",
+          "value": "Automatic"
+        }
+      ],
+      "dataType": "string",
+      "extendedProperties": [
+        {
+          "name": "ParameterMetadata",
+          "type": "json",
+          "value": {
+            "kind": 2,
+            "version": 3
+          }
+        }
+      ],
+      "isDataTypeInferred": true,
+      "isHidden": true,
+      "isNameInferred": false,
+      "lineageTag": "{ID_COL2}",
+      "sortByColumn": "{FULL_TABLE_NAME} {TYPE} Order",
+      "sourceColumn": "[Value2]",
+      "summarizeBy": "none",
+      "type": "calculatedTableColumn"
+    },
+    {
+      "name": "{FULL_TABLE_NAME} {TYPE} Order",
+      "annotations": [
+        {
+          "name": "SummarizationSetBy",
+          "value": "Automatic"
+        }
+      ],
+      "dataType": "int64",
+      "formatString": "0",
+      "isDataTypeInferred": true,
+      "isHidden": true,
+      "isNameInferred": false,
+      "lineageTag": "{ID_COL3}",
+      "sourceColumn": "[Value3]",
+      "summarizeBy": "sum",
+      "type": "calculatedTableColumn"
+    },
+    {
+      "name": "LanguageCode",
+      "annotations": [
+        {
+          "name": "SummarizationSetBy",
+          "value": "Automatic"
+        }
+      ],
+      "dataType": "string",
+      "isDataTypeInferred": true,
+      "isNameInferred": false,
+      "lineageTag": "{ID_COL4}",
+      "sourceColumn": "[Value4]",
+      "summarizeBy": "none",
+      "type": "calculatedTableColumn"
+    }
+  ],
+  "lineageTag": "{ID_TABLE}",
+  "partitions": [
+    {
+      "name": "{FULL_TABLE_NAME} {TYPE}",
+      "mode": "import",
+      "source": {
+        "expression": [
+        ],
+        "type": "calculated"
+      }
+    }
+  ]
+}

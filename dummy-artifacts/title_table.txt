@@ -1,0 +1,39 @@
+{
+"name": "TitlesTranslations",
+"annotations": [
+    {
+    "name": "PBI_Id",
+    "value": "cf86993943664097b25d977abc7bcd6c"
+    }
+],
+"columns": [
+    {
+    "name": "foo",
+    "annotations": [
+        {
+        "name": "SummarizationSetBy",
+        "value": "Automatic"
+        }
+    ],
+    "dataType": "string",
+    "isDataTypeInferred": true,
+    "isHidden": true,
+    "isNameInferred": true,
+    "lineageTag": "11efb3bf-392d-40cd-869e-86bdb578320f",
+    "sourceColumn": "[foo]",
+    "summarizeBy": "none",
+    "type": "calculatedTableColumn"
+    }
+],
+"lineageTag": "21ddcf5b-967b-41d4-9921-654b71f906fa",
+"partitions": [
+    {
+    "name": "TitlesTranslations",
+    "mode": "import",
+    "source": {
+        "expression": "DATATABLE(\"foo\", STRING, {{\"dummy\"}})",
+        "type": "calculated"
+    }
+    }
+]
+}

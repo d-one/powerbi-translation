@@ -1,0 +1,195 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1426.3823621857946,
+            "y": 140.15008485188775
+          },
+          "nodeIndex": "Fact",
+          "size": {
+            "height": 380,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1132.1808009926096,
+            "y": 151.13519563148606
+          },
+          "nodeIndex": "Dim Versicherer",
+          "size": {
+            "height": 225,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1710.5638510073031,
+            "y": 140.15008485188775
+          },
+          "nodeIndex": "Dim Schaden Art",
+          "size": {
+            "height": 228,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1718.5638510073031,
+            "y": 507.15008485188775
+          },
+          "nodeIndex": "Dim Schaden Art_with_translation",
+          "nodeLineageTag": "925e1178-f0e7-4b75-b020-6fee62bcf421",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 567.64479699260937,
+            "y": 347.65008485188775
+          },
+          "nodeIndex": "TitlesTranslations",
+          "nodeLineageTag": "21ddcf5b-967b-41d4-9921-654b71f906fa",
+          "size": {
+            "height": 150.56414499999994,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 297.07951970227759,
+            "y": 345.00257214927785
+          },
+          "nodeIndex": "LanguageSelection",
+          "nodeLineageTag": "3233461f-3af7-4c89-bbed-f18c9986d7d6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 9.3756085281334549,
+            "y": 485.30016970377551
+          },
+          "nodeIndex": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Column",
+          "nodeLineageTag": "7688d215-0d18-49ad-af32-20d8a0679834",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 13,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 9.46896812754818,
+            "y": 608.57922230299539
+          },
+          "nodeIndex": "ZZ FP Dim Schaden Art_with_translation_Schaden Art Gruppe Column",
+          "nodeLineageTag": "d67bb0a7-4d77-44fb-affc-17af85d9f3ee",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 3.4482118589626225,
+            "y": 253.5292070493781
+          },
+          "nodeIndex": "ZZ FP Dim Versicherer_Versicherer Column",
+          "nodeLineageTag": "beaeb6bf-25c5-4cc7-973b-40d268371e27",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 8,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 4,
+            "y": 141.40147215913544
+          },
+          "nodeIndex": "ZZ FP Fact_Jahr Column",
+          "nodeLineageTag": "2032ae22-3961-4f16-835b-4f8c138767f4",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 9,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 3.3808113872469221,
+            "y": 29
+          },
+          "nodeIndex": "ZZ FP Fact_Schaden Netto MCHF Measure",
+          "nodeLineageTag": "dade0e67-5e84-4972-a530-ec8b0d6a884e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 10,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 11.180800992609647,
+            "y": 723.66465610598584
+          },
+          "nodeIndex": "ZZ FP Fact_Schadenquote Measure",
+          "nodeLineageTag": "3a74e3eb-5165-4966-bd94-77d2a027981e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 11,
+          "expandedHeight": 176
+        },
+        {
+          "location": {
+            "x": 6.0133298451145833,
+            "y": 366.32203591876555
+          },
+          "nodeIndex": "ZZ FP Fact_Verdiente Prämien MCHF Measure",
+          "nodeLineageTag": "d6d0a601-0bf2-4c3a-b456-68e594fae436",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 12,
+          "expandedHeight": 176
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 86,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
